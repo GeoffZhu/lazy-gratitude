@@ -1,0 +1,10 @@
+{
+  "KEY": {
+    "API_KEY": "配置你的智谱API_KEY"
+  },
+  "permissions": {
+    "openapi": [
+      "wxacode.get"
+    ]
+  }
+}

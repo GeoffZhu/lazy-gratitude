@@ -1,0 +1,50 @@
+<van-notice-bar
+  left-icon="volume-o"
+  text="生成的字数越多需要的时间越久，请耐心等待"
+/>
+<view class="container">
+  <textarea
+    class="textarea"
+    placeholder="一句话描述您要给谁写感谢信，为什么？ \n 例如 “写给老师的感谢信，感谢老师平时对我的照顾”"
+    disable-default-padding="{{true}}"
+    cursor-spacing="{{80}}"
+    adjust-position
+    hold-keyboard="{{true}}"
+    show-confirm-bar="{{true}}"
+    name="textarea"
+    model:value="{{content}}"
+    maxlength="{{200}}"
+  />
+
+  <view style="width: 100%;margin-bottom: 40rpx;">
+    <van-cell-group>
+      <van-cell
+        title="语言"
+        value="{{lang}}"
+        label="支持 中文、英文、日文"
+        bind:tap="onShowActions"
+        data-cell="lang"
+      />
+      <van-cell
+        title="字数"
+        value="{{maxlength}} 字"
+        label="最大支持 800 字"
+        bind:tap="onShowActions"
+        data-cell="maxlength"
+      />
+    </van-cell-group>
+  </view>
+  <button class="btn" type="primary" bind:tap="onGenrate">点击生成</button>
+  <view class="bottom">
+    <button open-type="feedback" plain="true" size="mini">建议反馈</button>
+    <button open-type="share" plain="true" size="mini">分享好友</button>
+  </view>
+</view>
+
+<van-action-sheet
+  show="{{ showActionSheet }}"
+  actions="{{ actions }}"
+  bind:select="onSelectAction"
+  bind:cancel="onCancelAction"
+  cancel-text="取消"
+/>

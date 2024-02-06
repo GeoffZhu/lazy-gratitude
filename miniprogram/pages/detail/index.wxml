@@ -1,0 +1,7 @@
+<view class="container">
+  <textarea class="textarea" placeholder="请输入内容" disable-default-padding="{{true}}"	cursor-spacing="{{80}}" auto-height adjust-position hold-keyboard="{{true}}" show-confirm-bar="{{false}}" name="textarea" model:value="{{content}}" maxlength="{{-1}}"/>
+  <view class="footer-placeholder"></view>
+  <view class="footer">
+    <button type="primary" bind:tap="onBtnTap">复制到剪贴板</button>
+  </view>
+</view>

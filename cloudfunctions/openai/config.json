@@ -1,0 +1,11 @@
+{
+  "KEY": {
+    "OPENAI_API_KEY": "配置你的OPENAI API_KEY",
+    "OPENAI_ORG_KEY": "配置你的OPENAI ORG_KEY"
+  },
+  "permissions": {
+    "openapi": [
+      "wxacode.get"
+    ]
+  }
+}
